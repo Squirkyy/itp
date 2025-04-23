@@ -1,7 +1,12 @@
 def add_to_list():
     list = []
-    for _ in range(0,5):
-        list.append(int(input("your number:")))
+    i = 0
+    while i < 5:
+        try:
+            list.append(float(input("your number:")))
+            i += 1
+        except ValueError:
+            print("not a number")
     return list
 
 print(add_to_list())

@@ -1,6 +1,6 @@
-def vocale(zeichenkette):
+def vocale(text):
     count = 0
-    for letter in zeichenkette:
+    for letter in text:
         match letter:
             case 'a' | 'e' | 'i' | 'o'| 'u':
                 count += 1
@@ -8,4 +8,6 @@ def vocale(zeichenkette):
                 pass
     return count
 
-print(vocale("Hallo world"))
+
+text = input("Eingabe: ")
+print("Ausgabe: " + str(vocale(text)))
